@@ -6,7 +6,7 @@ license = { file = "LICENSE" }
 
 
 [tool.qgspb.package-data]
-"send2google_earth.icons" = ["*.png", "*.svg"]
+"send2google_earth.icons" = ["*.svg"]
 
 [tool.qgspb.forms]
 ui-files = ["src/send2google_earth/ui/*.ui"]

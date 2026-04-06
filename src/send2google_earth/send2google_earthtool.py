@@ -22,9 +22,10 @@ from qgis.core import (
 )
 from qgis.gui import QgisInterface, QgsMapTool
 from qgis.PyQt.QtCore import Qt
-from qgis.PyQt.QtGui import QCursor, QMouseEvent, QPixmap
+from qgis.PyQt.QtGui import QMouseEvent
 from qgis.PyQt.QtWidgets import QApplication, QMessageBox
 
+from send2google_earth.cursor import Send2GECursor, create_cursor
 from send2google_earth.google_earth_runner_factory import (
     GoogleEarthRunnerFactory,
 )
@@ -48,9 +49,7 @@ class Send2GEtool(QgsMapTool):
 
         self.plugin_dir = Path(__file__).parent
 
-        self.cursor = QCursor(
-            QPixmap(str(self.plugin_dir / "icons" / "cursor2.png")), 1, 1
-        )
+        self.cursor = create_cursor(Send2GECursor.IDENTIFY)
 
     def activate(self) -> None:
         self.canvas.setCursor(self.cursor)

@@ -30,7 +30,7 @@ changelog=
         * do not block window on Linux
         * few alternatives for GE location on Windows
 
-icon=icons/icon.png
+icon=icons/send2ge.svg
 
 tags=google,google earth
 
@@ -44,4 +44,3 @@ video[ru]=https://youtu.be/LrJ8VAX6vbQ
 
 experimental=False
 deprecated=False
-supportsQt6=True

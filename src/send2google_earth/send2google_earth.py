@@ -61,11 +61,13 @@ class Send2GE:
     def initGui(self) -> None:
         """Create actions and add them to the QGIS GUI."""
         self.menu = QMenu(self.iface.mainWindow())
-        self.menu.setTitle("Send2GoogleEarth")
-        self.menu.setIcon(QIcon(str(self.plugin_dir / "icons" / "icon.png")))
+        self.menu.setTitle("Send2GE")
+        self.menu.setIcon(
+            QIcon(str(self.plugin_dir / "icons" / "send2ge.svg"))
+        )
 
         self.send_click_action = QAction(
-            QIcon(str(self.plugin_dir / "icons" / "cursor2.png")),
+            QIcon(str(self.plugin_dir / "icons" / "mActionIdentify.svg")),
             self.tr("Send to Google Earth"),
             self.iface.mainWindow(),
         )
@@ -89,14 +91,14 @@ class Send2GE:
 
         self.iface.addWebToolBarIcon(self.send_click_action)
 
-        self.__show_help_action = QAction(
-            QIcon(str(self.plugin_dir / "icons" / "icon.png")),
+        self._show_help_action = QAction(
+            QIcon(str(self.plugin_dir / "icons" / "send2ge.svg")),
             "Send2GE",
         )
-        self.__show_help_action.triggered.connect(self.about)
+        self._show_help_action.triggered.connect(self.about)
         plugin_help_menu = self.iface.pluginHelpMenu()
         assert plugin_help_menu is not None
-        plugin_help_menu.addAction(self.__show_help_action)
+        plugin_help_menu.addAction(self._show_help_action)
 
     def unload(self) -> None:
         """Remove actions and toolbar icon when the plugin is unloaded."""
@@ -111,8 +113,8 @@ class Send2GE:
 
         plugin_help_menu = self.iface.pluginHelpMenu()
         assert plugin_help_menu is not None
-        plugin_help_menu.removeAction(self.__show_help_action)
-        self.__show_help_action.deleteLater()
+        plugin_help_menu.removeAction(self._show_help_action)
+        self._show_help_action.deleteLater()
 
         if self.iface.mapCanvas().mapTool() == self.map_tool:
             self.iface.mapCanvas().unsetMapTool(self.map_tool)
