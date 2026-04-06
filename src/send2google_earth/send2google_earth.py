@@ -85,9 +85,9 @@ class Send2GE:
         self.menu.addAction(self.send_click_action)
         self.menu.addAction(self.action_about)
 
-        self.iface.pluginMenu().addMenu(self.menu)
+        self.iface.webMenu().addMenu(self.menu)
 
-        self.iface.addToolBarIcon(self.send_click_action)
+        self.iface.addWebToolBarIcon(self.send_click_action)
 
         self.__show_help_action = QAction(
             QIcon(str(self.plugin_dir / "icons" / "icon.png")),
@@ -100,10 +100,10 @@ class Send2GE:
 
     def unload(self) -> None:
         """Remove actions and toolbar icon when the plugin is unloaded."""
-        self.iface.removeToolBarIcon(self.send_click_action)
+        self.iface.removeWebToolBarIcon(self.send_click_action)
 
         if self.menu is not None:
-            self.iface.pluginMenu().removeAction(self.menu.menuAction())
+            self.iface.webMenu().removeAction(self.menu.menuAction())
             self.menu.deleteLater()
 
         self.send_click_action.deleteLater()
