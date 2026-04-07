@@ -6,11 +6,25 @@ about=Grab current location and send it to Google Earth. Developed by NextGIS. A
 about[ru]=Захватите текущее местоположение и отправьте его в Google Earth. Разработан компанией NextGIS. Любые отзывы приветствуются на https://nextgis.com/contact.
 category=Vector
 version=0.4.0
-qgisMinimumVersion=3.22
-qgisMaximumVersion=3.99
+qgisMinimumVersion=3.32
+qgisMaximumVersion=4.99
 
 author=NextGIS
 email=info@nextgis.com
+icon=icons/send2ge.svg
+
+tags=google,google earth
+
+homepage=https://github.com/nextgis/send2google_earth
+user_guide=https://docs.nextgis.com/docs_ngqgis/source/send2ge.html
+user_guide[ru]=https://docs.nextgis.ru/docs_ngqgis/source/send2ge.html
+tracker=https://github.com/nextgis/send2google_earth/issues
+repository=https://github.com/nextgis/send2google_earth
+video=https://youtu.be/HnNm7BhXPyU
+video[ru]=https://youtu.be/LrJ8VAX6vbQ
+
+experimental=False
+deprecated=False
 
 changelog=
     0.4.0
@@ -29,18 +43,3 @@ changelog=
         * change Debian GE binary name for Debian
         * do not block window on Linux
         * few alternatives for GE location on Windows
-
-icon=icons/send2ge.svg
-
-tags=google,google earth
-
-homepage=https://github.com/nextgis/send2google_earth
-user_guide=https://docs.nextgis.com/docs_ngqgis/source/send2ge.html
-user_guide[ru]=https://docs.nextgis.ru/docs_ngqgis/source/send2ge.html
-tracker=https://github.com/nextgis/send2google_earth/issues
-repository=https://github.com/nextgis/send2google_earth
-video=https://youtu.be/HnNm7BhXPyU
-video[ru]=https://youtu.be/LrJ8VAX6vbQ
-
-experimental=False
-deprecated=False
