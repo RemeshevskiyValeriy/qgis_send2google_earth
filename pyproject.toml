@@ -1,6 +1,6 @@
 [project]
 name = "send2google_earth"
-version = "1.0.0"
+version = "1.0.1"
 readme = "README.md"
 license = { file = "LICENSE" }
 
