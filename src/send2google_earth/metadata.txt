@@ -5,7 +5,7 @@ description[ru]=Отправляет текущее местоположение
 about=Grab current location and send it to Google Earth. Developed by NextGIS. Any feedback is welcome at https://nextgis.com/contact
 about[ru]=Захватите текущее местоположение и отправьте его в Google Earth. Разработан компанией NextGIS. Любые отзывы приветствуются на https://nextgis.com/contact.
 category=Vector
-version=0.4.0
+version=1.0.0
 qgisMinimumVersion=3.32
 qgisMaximumVersion=4.99
 
@@ -27,6 +27,12 @@ experimental=False
 deprecated=False
 
 changelog=
+    1.0.0
+        * Added support for Qt6
+        * Implemented Google Earth detection via .kml file association (Windows)
+        * Moved plugin actions to the Web menu and toolbar
+        * Updated plugin icons
+        * Added a link to the community forum
     0.4.0
         * Updated the "About plugin" dialog
         * Added plugin item to help menu
